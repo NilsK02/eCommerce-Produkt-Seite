@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="showCart">
+<nav class="header-nav">
+    
+  <a href="index.html"><img src="./images/logo.svg" alt="das sneakers logo"></a>
+  <ul>
+        <li class="active"><a href="indexsc.html">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+  </ul>
+    <div class="cart">
+      <img src="images/icon-cart.svg"><span id="iconcart-amount">0</span>
+      <img id="avatar" src="images/image-avatar.png">
+    </div>
+</nav>
+<hr>
+<!-- Fotos -->
+<div class="container1">
+  <div class="fotos">
+        <div class="big-thumb" id="big-thumb1"><img src="images/image-product-1.jpg"></div>
+        <div class="big-thumb" id="big-thumb2"><img src="images/image-product-2.jpg"></div>
+        <div class="big-thumb" id="big-thumb3"><img src="images/image-product-3.jpg"></div>
+        <div class="big-thumb" id="big-thumb4"><img src="images/image-product-4.jpg"></div>
+    
+      <div class="small-thumbs">
+        <img class="fotoaktiv" src="images/image-product-1-thumbnail.jpg" data-big-image-id="big-thumb1">
+        <img class="fotoaktiv" src="images/image-product-2-thumbnail.jpg" data-big-image-id="big-thumb2">
+        <img class="fotoaktiv" src="images/image-product-3-thumbnail.jpg" data-big-image-id="big-thumb3">
+        <img class="fotoaktiv" src="images/image-product-4-thumbnail.jpg" data-big-image-id="big-thumb4">
+      </div>
+  </div>
+
+<!-- Texte -->
+  <div class="texte">
+    <h5>SNEAKER COMPANY</h5>
+    <h1>Fall Limited Edition Sneakers</h1>
+    <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+      durable rubber outer sole, they’ll withstand everything the weather can offer.
+    </p>
+    <div class="rabatt"><h2>$125.00</h2><p>50%</p></div>
+    <p id="old-price">$250.00</p>
+<!--Buttons -->
+    <div class="a-c">
+      <div class="amounts">
+        <img id="minus-icon" src="images/icon-minus.svg" onclick="changeAmount('minus')">
+        <span id="current-quantity">1</span>
+        <img id="plus-icon" src="images/icon-plus.svg"  onclick="changeAmount('plus')">
+      </div>
+      <button id="addtocart" onclick="addToCart()"><img src="images/icon-cart.svg">Add to Cart</button>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+   <img class="big-thumbLB" id="lightbox-image">
+
+   <div class="styling-n-p">
+      <img id="previous" src="images/icon-previous.svg">
+      <img id="next" src="images/icon-next.svg">
+   </div>
+
+   <img id="closelb" src="images/icon-close.svg">
+
+   <div class="small-thumbs-lb">
+      <img class="lightbox-thumb" src="images/image-product-1-thumbnail.jpg" data-big-image-id="big-thumb1lb">
+      <img class="lightbox-thumb" src="images/image-product-2-thumbnail.jpg" data-big-image-id="big-thumb2lb">
+      <img class="lightbox-thumb" src="images/image-product-3-thumbnail.jpg" data-big-image-id="big-thumb3lb">
+      <img class="lightbox-thumb" src="images/image-product-4-thumbnail.jpg" data-big-image-id="big-thumb4lb">
+   </div>
+</div>
+
+
+  <!-- Warenkorb an der Seite -->
+<div class="cartTab">
+    <h1>Shopping Cart</h1>
+    <div class="listCart">
+        
+    </div>
+    <div class="btn">
+        <button class="close">CLOSE</button>
+        <button class="checkOut">CHECK OUT</button>
+    </div>
+</div>
+
+
+
+    
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a>Nils Küster</a>.
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
